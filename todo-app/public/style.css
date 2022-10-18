@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+  height: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #eeeeee;
+  -webkit-border-radius: 16px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 10px;
+  background-color: #666;
+  border: 1px solid #eee;
+  -webkit-border-radius: 16px;
+}
+
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #fefbc5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main h1 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 3rem;
+  text-align: center;
+  color: rgb(255, 86, 86);
+  width: 100%;
+  margin-top: 0.2rem;
+  padding: 0.5rem;
+}
+
+.todo-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  font-family: "Archivo Narrow", sans-serif;
+}
+
+.todo-form ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Box {
+  width: 14rem;
+  height: 12rem;
+  background-color: rgb(255, 255, 255);
+  margin: 2rem;
+  padding: 1rem;
+}
+
+.Box .inputBar {
+  width: 100%;
+  height: 10rem;
+  outline: none;
+  border: none;
+  resize: none;
+  font-size: 1.6rem;
+}
+
+.btn {
+  width: 100%;
+  height: 2rem;
+  outline: none;
+  border: none;
+  background-color: white;
+  transition: 0.5s;
+  font-size: 1.3rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.addBtn:hover {
+  background-color: #9aff9a;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: #666 2px 2px 2px;
+}
+
+.deleteBtn:hover {
+  background-color: #ff4925;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: #666 2px 2px 2px;
+}
+
+@media (max-width: 700px) {
+  .todo-form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .todo-form ul{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main h1{
+    font-size: 2.5rem;
+  }
+}
